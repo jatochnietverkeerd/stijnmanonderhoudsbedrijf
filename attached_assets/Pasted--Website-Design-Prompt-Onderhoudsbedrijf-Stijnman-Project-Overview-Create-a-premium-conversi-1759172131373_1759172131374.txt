@@ -1,0 +1,650 @@
+# Website Design Prompt: Onderhoudsbedrijf Stijnman
+
+## Project Overview
+
+Create a premium, conversion-optimized website for Onderhoudsbedrijf Stijnman (onderhoudsbedrijfstijnman.nl), a trusted roofing specialist serving the Haarlem and Amsterdam region. The website must position Onderhoudsbedrijf Stijnman as the most reliable, trusted, and premium-quality roofing specialist in the local market, outperforming all competitors through superior design, trust-building elements, and user experience.
+
+## Business Information
+
+**Company Name:** Onderhoudsbedrijf Stijnman  
+**Domain:** onderhoudsbedrijfstijnman.nl  
+**Primary Service Area:** Haarlem, Amsterdam, and surrounding municipalities
+
+**Core Services:**
+- Complete roof installations, renovations, and repairs
+- Membrane roofing (bitumen, EPDM)
+- Roof tiles (pannendaken, various styles)
+- Zinc roofing (specialist expertise)
+- Copper roofing (premium architectural applications)
+- Lead work (traditional craftsmanship)
+- Roof maintenance and inspections
+- Emergency repair services (available but not primary focus)
+
+**Services NOT Offered:** Solar panel installation
+
+**Target Audience:** Private homeowners in Haarlem and Amsterdam (age 35-70, property value €400k+) who value quality and reliability over lowest price, seeking long-term roofing solutions.
+
+**Market Positioning:** Premium quality specialist - most reliable and trusted local roofing expert, emphasizing craftsmanship and long-term relationships.
+
+## Brand Identity & Visual Direction
+
+### Color Palette (Premium Trustworthy)
+
+- **Primary:** Deep Navy Blue (#0B2F5C) - Trust, professionalism, stability
+- **Secondary:** Warm Charcoal (#3A3A3A) - Sophistication and strength
+- **Accent 1:** Warm Copper/Bronze (#B87333) - Premium quality, specialty metalwork
+- **Accent 2:** Bright Safety Orange (#FF6B35) - CTAs, action, visibility
+- **Neutral:** Soft Cream (#F5F5F0) - Breathing room, sophistication
+- **Pure White:** (#FFFFFF) - Clean sections, contrast
+
+### Typography
+
+**Primary (Headlines):** Proxima Nova Bold/Semibold, Gotham Bold, or Brandon Grotesque Bold
+**Secondary (Body):** Open Sans or Source Sans Pro (16-18px minimum, line-height 1.6-1.7)
+**Best Practices:** 2 font families maximum, clear size hierarchy, generous spacing
+
+### Photography Style
+
+**Critical: NO STOCK PHOTOS - All imagery must be authentic**
+
+**Required:**
+- 15-25 professional project photos with before/after comparisons
+- Craftsmanship detail shots (copper, zinc, lead work)
+- Team and process photos
+- Local context (Haarlem/Amsterdam architecture)
+- Consistent color grading and professional quality
+
+## Technical Requirements
+
+### Performance Standards (Non-Negotiable)
+
+- Page load time: Under 3 seconds (target: under 2)
+- Google PageSpeed score: 90+ (mobile and desktop)
+- Core Web Vitals compliance
+- Mobile-first responsive design
+- All images optimized (compressed, WebP format)
+- Lazy loading implementation
+- CDN for faster delivery
+
+### Platform Recommendation
+
+**WordPress** (custom theme) for maximum flexibility and SEO, OR **Squarespace** for faster deployment
+
+### Mobile Optimization
+
+- 61% of traffic will be mobile
+- Touch-friendly buttons (minimum 44x44px)
+- One-tap phone calling
+- Simplified navigation
+- Forms optimized for mobile input
+- Fast mobile speed (under 2.5 seconds)
+
+### SEO & Technical Standards
+
+- Local SEO optimization for Haarlem/Amsterdam
+- Individual service pages (550+ words each)
+- Location-specific pages with unique content
+- Schema markup for local business
+- XML sitemap, SSL certificate (HTTPS)
+- Proper heading hierarchy (H1, H2, H3)
+- Alt text for all images
+- Google Search Console and Analytics setup
+
+### Accessibility Standards
+
+**WCAG 2.1 AA Compliance:**
+- High contrast (4.5:1 minimum)
+- Keyboard navigation support
+- Screen reader compatible
+- Alt text for all images
+- Captions for videos
+- Proper heading hierarchy
+
+## Page Structure & Content
+
+### Homepage
+
+**Above the Fold:**
+- Hero: Full-width background (completed project in Haarlem) or video loop
+- Headline: "Haarlem's Most Trusted Roofing Specialist"
+- Subheadline: "Expert craftsmanship in all roofing types—20+ years protecting homes"
+- Primary CTA: "Gratis Dakinspectie Aanvragen"
+- Secondary CTA: Click-to-call phone number
+- Trust badges: Years experience, VCA certified, 15-year guarantee
+
+**Key Sections:**
+1. Value Proposition (3-4 differentiators with icons)
+2. Services Overview (visual grid, 6 service categories)
+3. Recent Projects Gallery (6-8 featured projects, before/after)
+4. Our Process (4-5 step visual workflow)
+5. Trust & Credibility (testimonials, certifications, statistics, video reviews)
+6. Service Area Map (interactive with project pins)
+7. Educational Content Preview
+8. Final CTA Section
+
+**Word Count:** 800-1,200 words
+
+### Service Pages (One Per Service)
+
+Create individual pages for:
+1. Complete Roof Installations
+2. Roof Renovations
+3. Roof Repairs & Maintenance
+4. Membrane Roofing (bitumen, EPDM)
+5. Roof Tiles
+6. Zinc Roofing
+7. Copper Roofing
+8. Lead Work
+9. Roof Inspections
+10. Emergency Repairs
+
+**Structure (550-800 words each):**
+- Service overview and benefits
+- Specific approach and materials
+- Why choose this service
+- Materials and options
+- Project gallery (6-10 photos)
+- FAQ section (5-7 questions)
+- CTA (request inspection)
+
+### About Us / Over Ons
+
+**Content Sections:**
+- Company story and heritage
+- Core values (craftsmanship, reliability, transparency)
+- Team introduction with photos
+- Certifications and credentials
+- Why we're different (specialty expertise)
+
+**Word Count:** 700-1,000 words
+
+### Portfolio / Projecten
+
+**Features:**
+- Filterable by service type, location, property type
+- Minimum 20-30 projects
+- Project cards with location tags
+- Detailed project pages with 6-10 images
+- Before/after documentation
+- Client testimonials
+
+### Service Area / Werkgebied
+
+**Structure:**
+- Interactive map of service area
+- Individual sections for major cities/areas:
+  - Haarlem (Noord, Centrum, Zuid, Schalkwijk)
+  - Amsterdam (West, Noord, Zuid, Oost, Centrum)
+  - Bloemendaal, Aerdenhout, Heemstede, Haarlemmermeer
+
+**Each location:** 100-150 words unique content, local projects, architectural considerations
+
+### Blog / Advies
+
+**Content Strategy:** 2-4 articles per month, 800-1,200 words each
+
+**Topic Categories:**
+1. Maintenance guides
+2. Material selection (bitumen vs EPDM, zinc benefits, copper durability)
+3. Process and timeline explanations
+4. Cost and value discussions
+5. Local topics (Haarlem regulations, Amsterdam historic buildings)
+6. Problem-solving (leak causes, storm damage, insulation)
+
+### Testimonials / Klantbeoordelingen
+
+**Features:**
+- 2-3 video testimonials (60-90 seconds each)
+- 15-25 written testimonials with photos
+- Google Reviews integration (auto-updating widget)
+- Overall rating prominently displayed
+- Project-specific reviews
+
+### Contact / Contact
+
+**Multiple Methods:**
+- Primary contact form (3-5 fields maximum)
+- Phone contact (large, clickable on mobile)
+- Email address
+- Physical address with Google Map
+- Business hours clearly stated
+- Response time expectations
+
+### Warranties & Guarantees
+
+**Content:**
+- 15-year workmanship guarantee (comprehensive)
+- Coverage details and what's included
+- Material warranties explained
+- Claims process
+- Transferability (adds home value)
+- Industry comparison (most offer 10 years)
+
+### FAQ Page
+
+**Categories:**
+1. Getting Started (quotes, inspections, timeline)
+2. Services & Expertise (what we do/don't do)
+3. Process & Timeline (duration, property protection)
+4. Pricing & Payment (cost factors, financing, insurance)
+5. Materials & Quality (materials used, warranties)
+6. After Installation (maintenance, warranty claims)
+
+## Modern Design Elements for Roofing Industry
+
+### Contemporary Layout Approaches
+
+- Breaking the grid (overlapping sections, asymmetrical layouts)
+- Strategic white space (improves readability 20%)
+- Full-width sections alternating with contained content
+- Layered elements creating depth
+
+### Interactive Elements
+
+**Micro-Animations (subtle, purposeful):**
+- Service cards lift on hover
+- Icons animate on scroll
+- Smooth section transitions
+- Before/after sliders (interactive dragging)
+
+**Interactive Features:**
+- Service area map with project pins
+- Scroll-triggered animations
+- Counter animations for statistics
+- Filterable project gallery
+
+### Video Integration
+
+**Homepage Hero Video (optional):**
+- 15-30 second loop of roofing work
+- Silent auto-play, fallback image
+- Under 5MB, optimized
+
+**Other Videos:**
+- Customer testimonials (2-3 videos)
+- Process documentation
+- Time-lapse installations
+- Material selection guides
+
+**Technical:** Host on Vimeo/YouTube, compressed, mobile-responsive, never auto-play with sound
+
+### Trust-Building Design Features
+
+1. **Certification Badges:** Above fold, footer, dedicated page
+2. **Real-Time Social Proof:** Google Reviews widget, project notifications
+3. **Transparent Pricing:** Factors explained, financing options
+4. **Team Visibility:** Real photos throughout, team profiles
+5. **Process Transparency:** Step-by-step workflows, timeline estimates
+
+### Mobile-Specific Design
+
+- Thumb-friendly navigation zones
+- Click-to-call prominence (sticky button)
+- Portrait-oriented images
+- Streamlined forms (3 fields max)
+- Large tap targets
+
+## Competitor Insights & Differentiation
+
+### Key Competitor Weaknesses (Stijnman Advantages)
+
+Based on analysis of 12 roofing companies in Haarlem/Amsterdam:
+
+1. **Testimonials Underutilized** → Stijnman: 20+ reviews, video testimonials, Google integration
+2. **Outdated Designs** → Stijnman: Modern, professional website
+3. **Limited Visuals** → Stijnman: Extensive before/after gallery, detail shots
+4. **No Video Content** → Stijnman: Customer videos, process videos
+5. **Generic Positioning** → Stijnman: Specific specialty (zinc, copper, lead), 15-year guarantee
+6. **Weak Team Visibility** → Stijnman: Full team profiles
+7. **Limited Educational Content** → Stijnman: 15-20 expert articles
+8. **Unclear Pricing** → Stijnman: Transparent pricing education
+9. **Emergency Over-Emphasized** → Stijnman: Trusted advisor positioning
+10. **No Live Engagement** → Stijnman: Live chat, WhatsApp integration
+
+### What Competitors Do Well
+
+**Learn from:**
+- **Platinum Dakdekkers:** Modern design, 15-year guarantee, professional photography
+- **John Foppen:** Personal owner-involved approach, educational content
+- **Buddingh:** Specialist positioning in metalwork, premium material emphasis
+- **Dakdekkers Loomans:** Excellent portfolio with location tags, visual proof
+
+### Primary Differentiators for Stijnman
+
+1. **Most Comprehensive Visual Portfolio** (25+ projects, video testimonials)
+2. **Specialist Metalwork Expertise** (zinc, copper, lead - prominently featured)
+3. **15-Year Guarantee** (match best in market)
+4. **Superior Customer Experience** (transparent communication, project managers)
+5. **Local Expertise** (deep Haarlem/Amsterdam architectural knowledge)
+6. **Modern Digital Experience** (best website, video content, interactive tools)
+
+### Positioning Statement
+
+"Onderhoudsbedrijf Stijnman is Haarlem and Amsterdam's most trusted roofing specialist, combining 20+ years of expert craftsmanship with modern materials and methods. We protect homes through quality workmanship in all roofing applications—from traditional tiles to specialist zinc, copper, and lead work—backed by our comprehensive 15-year guarantee. For homeowners who value reliability, transparency, and long-term peace of mind over the lowest price."
+
+## Visual Design Guidelines
+
+### Homepage Visual Hierarchy
+
+**Hero Section:**
+- Full-width background: Completed roof in Haarlem with traditional Dutch architecture
+- Dark gradient overlay (60% opacity)
+- Large bold headline in white
+- Subheadline in cream/off-white
+- Two CTAs: Primary (solid orange), Secondary (outline)
+- Trust badge strip below
+
+**Visual Flow:**
+Hero → Value cards → Services grid → Projects gallery → Process timeline → Testimonials → Certifications → Service map → Final CTA
+
+### Trust-Building Visuals
+
+**Badges & Certifications:**
+- Custom-designed badges matching brand
+- VCA certification, industry associations, manufacturer partnerships
+- "15 Jaar Garantie" custom badge
+- BBB rating, insurance/licensing badges
+
+**Before/After Treatment:**
+- High-quality comparison sliders
+- Clear "Voor" and "Na" labels
+- Location tag overlays
+- Mobile-optimized touch interaction
+
+**Team Photography:**
+- Professional but approachable
+- Clean work uniforms, safety equipment visible
+- On actual job sites (not studio)
+- Natural expressions
+
+**Project Gallery:**
+- Consistent aspect ratio
+- Hover overlay with details
+- Filter buttons styled as pills
+- Location tags in corners
+- Smooth transitions
+
+### Typography Hierarchy Examples
+
+**Homepage:**
+- H1 (Hero): 56px bold
+- H2 (Sections): 42px semibold
+- H3 (Subsections): 32px semibold
+- Body: 18px regular, line-height 1.6
+- Buttons: 16px bold, all caps, 1px letter-spacing
+
+**Service Pages:**
+- H1: 48px bold
+- H2: 36px semibold
+- H3: 28px semibold
+- Body: 18px regular
+- Callouts: 20px medium
+
+### Color Application
+
+**Navy (#0B2F5C):** Header, footer, section backgrounds, headings
+**Copper (#B87333):** Hover states, icon fills, underlines, dividers
+**Orange (#FF6B35):** Primary buttons, emergency indicators, highlights
+**Cream (#F5F5F0):** Alternating backgrounds, cards on dark sections
+
+### Imagery Composition
+
+**Hero Images:** Rule of thirds, golden hour lighting, include context
+**Detail Shots:** Macro craftsmanship, sharp focus, hands working
+**Team Photos:** Natural light, blurred background, eye-level, genuine
+
+## Content Strategy & SEO
+
+### Primary Keywords
+
+**Haarlem Focus:**
+- dakdekker Haarlem
+- dakdekkersbedrijf Haarlem
+- dakreparatie Haarlem
+- zink dakbedekking Haarlem
+- koperen dakgoten Haarlem
+
+**Amsterdam Focus:**
+- dakdekker Amsterdam
+- dakrenovatie Amsterdam
+- specialist loodwerk Amsterdam
+
+**Long-Tail:**
+- beste dakdekker Haarlem
+- dakdekker Haarlem met garantie
+- specialist zinkwerk Haarlem
+
+### Local SEO Strategy
+
+- Google Business Profile fully optimized
+- NAP consistency across all citations
+- Schema markup for local business
+- Location-specific pages for each service area
+- Local testimonials with city mentions
+- Embedded Google Maps
+
+## Conversion Optimization
+
+### Primary Goals
+
+1. Free Inspection Requests (Primary)
+2. Phone Calls (Primary)
+3. Contact Form Submissions (Secondary)
+
+### CTA Placement
+
+**Homepage (Multiple Touchpoints):**
+1. Hero: "Gratis Dakinspectie Aanvragen"
+2. After services: "Bekijk Wat Wij Kunnen Doen"
+3. After testimonials: "Word Onze Volgende Klant"
+4. After process: "Start Uw Project"
+5. Final section: "Plan Gratis Inspectie Nu"
+6. Sticky header: Click-to-call phone
+
+**Button Copy Best Practices:**
+- Action-oriented verbs
+- Benefit-focused
+- Examples: "Gratis Inspectie Aanvragen," "Offerte Aanvragen," "Bel Nu Voor Advies"
+
+### Form Optimization
+
+**Minimal Fields:**
+- Name (first name acceptable)
+- Phone OR Email (choose one)
+- Service interested in (dropdown)
+- Optional: Brief message
+- No CAPTCHA (use honeypot)
+
+**Trust Elements:**
+- "We respond within 24 hours"
+- "No obligation, completely free"
+- "Your privacy is protected"
+- Phone alternative shown
+
+## Implementation Checklist
+
+### Pre-Launch
+
+**Design & Content:**
+- [ ] All pages designed and approved
+- [ ] 25+ professional project photos
+- [ ] 15-20 written testimonials
+- [ ] 2-3 video testimonials
+- [ ] Team photos taken
+- [ ] All content written
+- [ ] Logo finalized
+
+**Technical:**
+- [ ] Domain configured
+- [ ] SSL installed (HTTPS)
+- [ ] Platform installed
+- [ ] All pages built
+- [ ] Mobile tested on multiple devices
+- [ ] Cross-browser tested
+- [ ] Forms tested
+- [ ] Phone numbers clickable
+
+**Performance:**
+- [ ] All images optimized
+- [ ] Lazy loading implemented
+- [ ] Caching configured
+- [ ] Page speed under 3 seconds
+- [ ] PageSpeed score 90+
+
+**SEO:**
+- [ ] Analytics installed
+- [ ] Search Console configured
+- [ ] Sitemap generated
+- [ ] Schema markup implemented
+- [ ] Meta titles/descriptions written
+- [ ] Alt text for all images
+- [ ] Internal linking complete
+
+**Local SEO:**
+- [ ] Google Business Profile optimized
+- [ ] NAP consistent
+- [ ] Local directories submitted
+- [ ] Location pages created
+
+**Accessibility:**
+- [ ] WCAG 2.1 AA compliance verified
+- [ ] Keyboard navigation tested
+- [ ] Screen reader tested
+- [ ] Color contrast verified
+
+### Post-Launch
+
+**First 30 Days:**
+- Monitor analytics daily
+- Track conversions
+- Fix bugs
+- Collect reviews
+- Start blog posting
+- Share on social media
+
+**First 90 Days:**
+- Monthly analytics review
+- A/B test variations
+- Build backlinks
+- Publish 8-12 blog posts
+- Add testimonials
+- Update portfolio
+
+**Ongoing:**
+- Monthly analytics
+- Quarterly content updates
+- Regular blog posts (2-4/month)
+- Portfolio updates
+- Review responses
+- SEO optimization
+
+## Budget Considerations
+
+### Investment Tiers
+
+**Essential (Minimum):** €5,800-10,500
+- Professional design/development: €3,500-6,000
+- Photography (15-20 projects): €800-1,500
+- Copywriting: €1,000-1,500
+- Logo refresh: €500-1,500
+
+**Recommended (Complete):** €12,500-22,000
+- Premium custom design: €6,000-10,000
+- Photography (25+ projects): €1,500-2,500
+- Video production: €2,000-4,000
+- Professional copywriting: €1,500-2,500
+- Brand identity: €1,500-3,000
+
+**Premium (Market-Leading):** €21,500-34,000
+- Custom development with advanced features: €10,000-15,000
+- Extensive photography/video: €4,000-6,000
+- Complete brand development: €3,000-5,000
+- Professional copywriting/SEO: €2,500-4,000
+- Interactive tools: €2,000-4,000
+
+**Ongoing Costs:**
+- Hosting: €15-50/month
+- Maintenance: €100-300/month
+- Content creation: €200-500/month
+- SEO services: €500-2,000/month
+
+### ROI Expectations
+
+- Conversion rate: 2-5%
+- Lead value: €500-2,000
+- Monthly visitors target: 500-1,500 (Year 1)
+- Monthly leads: 10-75 (Year 1)
+- Payback period: 6-12 months
+
+## Critical Success Factors
+
+1. **Authenticity Over Perfection** - Real photos, genuine testimonials, real team
+2. **Mobile-First Mindset** - 61% mobile traffic, test extensively
+3. **Speed is Non-Negotiable** - Under 3 seconds or lose 50%+ visitors
+4. **Local SEO Foundation** - Google Business Profile, reviews, citations critical
+5. **Continuous Improvement** - Launch is beginning, regular updates essential
+
+## Differentiation Through Excellence
+
+To outperform all competitors:
+
+1. **Best Visual Presentation** - Highest quality photography, most comprehensive portfolio
+2. **Most Trustworthy** - Most testimonials, longest guarantee, complete transparency
+3. **Most Helpful** - Best educational content, comprehensive FAQ
+4. **Clearest Expertise** - Specialist positioning, detailed explanations
+5. **Best User Experience** - Fastest website, easiest contact, mobile-optimized
+
+## Implementation Phases
+
+**Phase 1 (Weeks 1-4): Foundation**
+- Finalize design and brand
+- Photography of existing projects
+- Write core content
+- Technical infrastructure
+
+**Phase 2 (Weeks 5-8): Build**
+- Website development
+- Integrate content/imagery
+- Set up forms/tracking
+- Technical optimization
+
+**Phase 3 (Weeks 9-10): Refine**
+- Testing and bug fixes
+- Speed optimization
+- SEO setup
+- Content review
+
+**Phase 4 (Week 11-12): Launch**
+- Final testing
+- Public launch
+- Social media announcement
+- Local SEO submission
+
+**Phase 5 (Ongoing): Optimize**
+- Analytics review
+- Content additions
+- Portfolio updates
+- SEO optimization
+
+## Conclusion
+
+This comprehensive prompt provides a complete blueprint for creating a premium website that positions Onderhoudsbedrijf Stijnman as the most trusted roofing specialist in Haarlem and Amsterdam.
+
+**Key Principles:**
+
+- Premium positioning through visual excellence and comprehensive guarantees
+- Trust-building through authentic testimonials and transparency
+- Local expertise through geography-specific content
+- Modern user experience with fast performance and intuitive navigation
+- Conversion optimization through strategic CTAs and minimal friction
+- Competitive differentiation by addressing all competitor weaknesses
+
+**Success Metrics:**
+
+- Lead generation (inspections, calls, quotes)
+- Customer acquisition cost reduction
+- Premium pricing support
+- Market reputation enhancement
+- Sustainable long-term growth
+
+This website embodies Onderhoudsbedrijf Stijnman's commitment to quality, reliability, and customer service excellence—positioning the company to dominate the Haarlem and Amsterdam roofing market through digital excellence.
