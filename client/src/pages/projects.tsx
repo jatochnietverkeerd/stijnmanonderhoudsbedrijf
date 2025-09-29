@@ -3,11 +3,15 @@ import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Calendar } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { MapPin, Calendar, X, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Project } from "@shared/schema";
 
 export default function Projects() {
   const [selectedFilter, setSelectedFilter] = useState("all");
+  const [selectedLocationFilter, setSelectedLocationFilter] = useState("all");
+  const [selectedImageProject, setSelectedImageProject] = useState<Project | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const { data: allProjects = [], isLoading } = useQuery<Project[]>({
     queryKey: ["/api/projects"],
@@ -23,9 +27,24 @@ export default function Projects() {
     { id: "membrane", label: "Membrane" }
   ];
 
-  const filteredProjects = selectedFilter === "all" 
-    ? allProjects 
-    : allProjects.filter(project => project.serviceType === selectedFilter);
+  // Get unique locations for location filter
+  const uniqueLocations = Array.from(new Set(allProjects.map(project => {
+    // Extract city from location (e.g., "Haarlem Noord" -> "Haarlem")
+    const city = project.location.split(' ')[0];
+    return city;
+  })));
+  
+  const locationFilters = [
+    { id: "all", label: "Alle Locaties" },
+    ...uniqueLocations.map(location => ({ id: location.toLowerCase(), label: location }))
+  ];
+
+  const filteredProjects = allProjects.filter(project => {
+    const serviceMatch = selectedFilter === "all" || project.serviceType === selectedFilter;
+    const locationMatch = selectedLocationFilter === "all" || 
+      project.location.toLowerCase().includes(selectedLocationFilter);
+    return serviceMatch && locationMatch;
+  });
 
   if (isLoading) {
     return (
@@ -65,23 +84,48 @@ export default function Projects() {
       {/* Projects Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            {filters.map((filter) => (
-              <Button
-                key={filter.id}
-                onClick={() => setSelectedFilter(filter.id)}
-                variant={selectedFilter === filter.id ? "default" : "outline"}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
-                  selectedFilter === filter.id
-                    ? "bg-primary text-white hover:opacity-90"
-                    : "border-primary text-primary hover:bg-primary hover:text-white"
-                }`}
-                data-testid={`projects-filter-${filter.id}`}
-              >
-                {filter.label}
-              </Button>
-            ))}
+          {/* Service Type Filter Buttons */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-primary mb-4 text-center">Filter op Service Type</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {filters.map((filter) => (
+                <Button
+                  key={filter.id}
+                  onClick={() => setSelectedFilter(filter.id)}
+                  variant={selectedFilter === filter.id ? "default" : "outline"}
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
+                    selectedFilter === filter.id
+                      ? "bg-primary text-white hover:opacity-90"
+                      : "border-primary text-primary hover:bg-primary hover:text-white"
+                  }`}
+                  data-testid={`projects-filter-${filter.id}`}
+                >
+                  {filter.label}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          {/* Location Filter Buttons */}
+          <div className="mb-16">
+            <h3 className="text-lg font-semibold text-primary mb-4 text-center">Filter op Locatie</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {locationFilters.map((filter) => (
+                <Button
+                  key={filter.id}
+                  onClick={() => setSelectedLocationFilter(filter.id)}
+                  variant={selectedLocationFilter === filter.id ? "default" : "outline"}
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
+                    selectedLocationFilter === filter.id
+                      ? "bg-copper text-white hover:opacity-90"
+                      : "border-copper text-copper hover:bg-copper hover:text-white"
+                  }`}
+                  data-testid={`projects-location-filter-${filter.id}`}
+                >
+                  {filter.label}
+                </Button>
+              ))}
+            </div>
           </div>
 
           {/* Projects Grid */}
@@ -104,7 +148,12 @@ export default function Projects() {
                     <img 
                       src={project.images[0]}
                       alt={project.title}
-                      className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" 
+                      className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" 
+                      onClick={() => {
+                        setSelectedImageProject(project);
+                        setSelectedImageIndex(0);
+                      }}
+                      data-testid={`project-image-${project.id}`}
                     />
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-copper text-white capitalize">
@@ -143,6 +192,89 @@ export default function Projects() {
           )}
         </div>
       </section>
+
+      {/* Image Gallery Modal */}
+      <Dialog 
+        open={selectedImageProject !== null} 
+        onOpenChange={(open) => {
+          if (!open) {
+            setSelectedImageProject(null);
+            setSelectedImageIndex(0);
+          }
+        }}
+      >
+        <DialogContent className="max-w-4xl w-full" aria-describedby="project-details">
+          {selectedImageProject && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-left">{selectedImageProject.title}</DialogTitle>
+              </DialogHeader>
+              <div className="relative">
+                <img 
+                  src={selectedImageProject.images[selectedImageIndex]}
+                  alt={`${selectedImageProject.title} - Afbeelding ${selectedImageIndex + 1}`}
+                  className="w-full max-h-[70vh] object-contain rounded-lg"
+                />
+                
+                {/* Navigation arrows for multiple images */}
+                {selectedImageProject.images.length > 1 && (
+                  <>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white hover:bg-black/70"
+                      onClick={() => setSelectedImageIndex(prev => 
+                        prev === 0 ? selectedImageProject.images.length - 1 : prev - 1
+                      )}
+                      data-testid="image-nav-prev"
+                    >
+                      <ChevronLeft className="w-6 h-6" />
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white hover:bg-black/70"
+                      onClick={() => setSelectedImageIndex(prev => 
+                        prev === selectedImageProject.images.length - 1 ? 0 : prev + 1
+                      )}
+                      data-testid="image-nav-next"
+                    >
+                      <ChevronRight className="w-6 h-6" />
+                    </Button>
+                  </>
+                )}
+              </div>
+              
+              {/* Project details in modal */}
+              <div id="project-details" className="space-y-4">
+                <p className="text-muted-foreground">{selectedImageProject.description}</p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <Badge className="bg-copper text-white capitalize">
+                      {selectedImageProject.serviceType}
+                    </Badge>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="w-4 h-4 text-copper" />
+                    <span>{selectedImageProject.location}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="w-4 h-4 text-copper" />
+                    <span>Opgeleverd: {selectedImageProject.completedDate}</span>
+                  </div>
+                </div>
+                
+                {/* Image indicator */}
+                {selectedImageProject.images.length > 1 && (
+                  <div className="text-center text-sm text-muted-foreground">
+                    Afbeelding {selectedImageIndex + 1} van {selectedImageProject.images.length}
+                  </div>
+                )}
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-muted/30">

@@ -50,7 +50,11 @@ export class MemStorage implements IStorage {
         serviceType: "zink",
         location: "Haarlem Centrum",
         completedDate: "April 2024",
-        images: ["https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"],
+        images: [
+          "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+          "https://images.unsplash.com/photo-1556909114-74e8eb30e54c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+          "https://images.unsplash.com/photo-1516417901640-48fb25c96c75?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+        ],
         featured: "true"
       },
       {
@@ -60,7 +64,10 @@ export class MemStorage implements IStorage {
         serviceType: "koper",
         location: "Amsterdam Centrum",
         completedDate: "Januari 2024",
-        images: ["https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"],
+        images: [
+          "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+          "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+        ],
         featured: "true"
       },
       {
