@@ -1,4 +1,4 @@
-import { type Contact, type InsertContact, type Project, type InsertProject, type Testimonial, type InsertTestimonial } from "@shared/schema";
+import { type Contact, type InsertContact, type Project, type InsertProject, type Testimonial, type InsertTestimonial, type BlogPost, type InsertBlogPost } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -14,6 +14,11 @@ export interface IStorage {
   // Testimonial methods
   getTestimonials(): Promise<Testimonial[]>;
   getTestimonialsByService(serviceType: string): Promise<Testimonial[]>;
+  
+  // Blog post methods
+  getBlogPosts(): Promise<BlogPost[]>;
+  getBlogPostBySlug(slug: string): Promise<BlogPost | null>;
+  getBlogPostsByCategory(category: string): Promise<BlogPost[]>;
 }
 
 export class MemStorage implements IStorage {

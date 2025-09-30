@@ -1,8 +1,8 @@
 import { drizzle } from "drizzle-orm/neon-serverless";
 import { Pool, neonConfig } from "@neondatabase/serverless";
-import { eq } from "drizzle-orm";
-import type { InsertContact, Contact, Project, Testimonial } from "@shared/schema";
-import { contacts, projects, testimonials } from "@shared/schema";
+import { eq, desc } from "drizzle-orm";
+import type { InsertContact, Contact, Project, Testimonial, BlogPost } from "@shared/schema";
+import { contacts, projects, testimonials, blogPosts } from "@shared/schema";
 import ws from "ws";
 
 neonConfig.webSocketConstructor = ws;
@@ -20,6 +20,11 @@ export interface IStorage {
   // Testimonial methods
   getTestimonials(): Promise<Testimonial[]>;
   getTestimonialsByService(serviceType: string): Promise<Testimonial[]>;
+  
+  // Blog post methods
+  getBlogPosts(): Promise<BlogPost[]>;
+  getBlogPostBySlug(slug: string): Promise<BlogPost | null>;
+  getBlogPostsByCategory(category: string): Promise<BlogPost[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -62,5 +67,18 @@ export class DatabaseStorage implements IStorage {
 
   async getTestimonialsByService(serviceType: string): Promise<Testimonial[]> {
     return await this.db.select().from(testimonials).where(eq(testimonials.serviceType, serviceType));
+  }
+
+  async getBlogPosts(): Promise<BlogPost[]> {
+    return await this.db.select().from(blogPosts).orderBy(desc(blogPosts.publishedAt));
+  }
+
+  async getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+    const results = await this.db.select().from(blogPosts).where(eq(blogPosts.slug, slug));
+    return results[0] || null;
+  }
+
+  async getBlogPostsByCategory(category: string): Promise<BlogPost[]> {
+    return await this.db.select().from(blogPosts).where(eq(blogPosts.category, category)).orderBy(desc(blogPosts.publishedAt));
   }
 }

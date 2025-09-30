@@ -77,6 +77,41 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Get all blog posts
+  app.get("/api/blog", async (req, res) => {
+    try {
+      const { category } = req.query;
+      
+      let posts;
+      if (category && typeof category === "string") {
+        posts = await storage.getBlogPostsByCategory(category);
+      } else {
+        posts = await storage.getBlogPosts();
+      }
+      
+      res.json(posts);
+    } catch (error) {
+      res.status(500).json({ message: "Er is een fout opgetreden" });
+    }
+  });
+
+  // Get blog post by slug
+  app.get("/api/blog/:slug", async (req, res) => {
+    try {
+      const { slug } = req.params;
+      const post = await storage.getBlogPostBySlug(slug);
+      
+      if (!post) {
+        res.status(404).json({ message: "Blog post niet gevonden" });
+        return;
+      }
+      
+      res.json(post);
+    } catch (error) {
+      res.status(500).json({ message: "Er is een fout opgetreden" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

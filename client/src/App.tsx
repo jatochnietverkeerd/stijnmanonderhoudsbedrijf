@@ -10,6 +10,8 @@ import ServiceDetail from "@/pages/service-detail";
 import Projects from "@/pages/projects";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
+import Blog from "@/pages/blog";
+import BlogPost from "@/pages/blog-post";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import StickyContact from "@/components/sticky-contact";
@@ -23,6 +25,8 @@ function Router() {
       <Route path="/projecten" component={Projects} />
       <Route path="/over-ons" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route component={NotFound} />
     </Switch>
   );
