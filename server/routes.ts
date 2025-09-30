@@ -1,8 +1,10 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
+import { DatabaseStorage } from "./db";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
+
+const storage = new DatabaseStorage();
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission
