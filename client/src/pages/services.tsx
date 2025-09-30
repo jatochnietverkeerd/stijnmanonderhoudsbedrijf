@@ -23,46 +23,55 @@ export default function Services() {
       {/* Services Grid */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service, index) => (
-              <Card 
-                key={service.id}
-                className="hover-lift border border-border overflow-hidden"
-                data-testid={`service-detail-card-${service.id}`}
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                  />
-                </div>
-                <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold text-primary mb-4">{service.title}</h2>
-                  <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                    {service.detailedDescription}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h3 className="font-semibold text-primary mb-3">Kenmerken:</h3>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-2 text-muted-foreground">
-                          <span className="w-2 h-2 bg-copper rounded-full flex-shrink-0"></span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+              <Link key={service.id} href={`/diensten/${service.id}`}>
+                <Card
+                  className="hover-lift border border-border overflow-hidden cursor-pointer h-full group"
+                  data-testid={`service-detail-card-${service.id}`}
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 right-4 bg-copper text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      Meer info →
+                    </div>
                   </div>
+                  <CardContent className="p-6">
+                    <h2 className="text-xl font-bold text-primary mb-3 group-hover:text-copper transition-colors duration-200">
+                      {service.title}
+                    </h2>
+                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
 
-                  <Link href={`/diensten/${service.id}`}>
-                    <span className="text-copper font-semibold hover:text-primary transition-colors duration-200 flex items-center space-x-2 cursor-pointer">
+                    <div className="mb-4">
+                      <h3 className="font-semibold text-primary mb-2 text-sm">Kenmerken:</h3>
+                      <ul className="space-y-1">
+                        {service.features.slice(0, 3).map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center space-x-2 text-muted-foreground text-sm">
+                            <span className="w-1.5 h-1.5 bg-copper rounded-full flex-shrink-0"></span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                        {service.features.length > 3 && (
+                          <li className="text-copper text-sm font-medium">
+                            +{service.features.length - 3} meer
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+
+                    <span className="text-copper font-semibold group-hover:text-primary transition-colors duration-200 flex items-center space-x-2 text-sm">
                       <span>Meer details bekijken</span>
-                      <ArrowRight className="w-5 h-5" />
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                     </span>
-                  </Link>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
