@@ -290,7 +290,7 @@ export default function Projects() {
               onClick={() => {
                 window.location.href = '/contact';
               }}
-              className="orange-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity duration-200 h-auto"
+              className="copper-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity duration-200 h-auto"
               data-testid="projects-cta-contact"
             >
               Gratis Inspectie Aanvragen

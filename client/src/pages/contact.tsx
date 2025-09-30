@@ -257,7 +257,7 @@ export default function Contact() {
                 </p>
                 <a 
                   href="tel:+31207123456"
-                  className="inline-flex items-center space-x-2 orange-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-200"
+                  className="inline-flex items-center space-x-2 copper-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-200"
                   data-testid="contact-extended-area"
                 >
                   <Phone className="w-5 h-5" />
@@ -285,7 +285,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <a 
               href="tel:+31207123456"
-              className="orange-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity duration-200"
+              className="copper-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity duration-200"
               data-testid="final-contact-phone"
             >
               <Phone className="w-5 h-5 mr-2 inline" />

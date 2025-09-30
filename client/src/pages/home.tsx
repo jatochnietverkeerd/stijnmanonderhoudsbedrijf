@@ -1,5 +1,6 @@
 import HeroSection from "@/components/hero-section";
 import ValueProposition from "@/components/value-proposition";
+import TrustBadges from "@/components/trust-badges";
 import ServicesOverview from "@/components/services-overview";
 import ProjectGallery from "@/components/project-gallery";
 import ProcessTimeline from "@/components/process-timeline";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <div className="pt-16 lg:pt-20">
       <HeroSection />
+      <TrustBadges />
       <ValueProposition />
       <ServicesOverview />
       <ProjectGallery />

@@ -11,7 +11,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[85vh] md:min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
       {/* Hero Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -26,33 +26,33 @@ export default function HeroSection() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 text-shadow animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 text-shadow animate-fade-in leading-tight">
             Haarlem's Meest <span className="text-copper">Vertrouwde</span> Dakspecialist
           </h1>
-          
+
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl lg:text-3xl text-cream mb-8 text-shadow animate-fade-in" 
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-cream mb-6 sm:mb-8 text-shadow animate-fade-in"
              style={{ animationDelay: '0.2s' }}>
             Expert vakmanschap in alle soorten dakwerk—20+ jaar bescherming voor uw huis
           </p>
           
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12 animate-fade-in" 
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 mb-8 sm:mb-12 animate-fade-in"
                style={{ animationDelay: '0.4s' }}>
-            <Button 
+            <Button
               onClick={handleRequestInspection}
-              className="w-full sm:w-auto orange-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity duration-200 h-auto"
+              className="w-full sm:w-auto copper-gradient text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:opacity-90 transition-opacity duration-200 h-auto shadow-lg"
               data-testid="hero-request-inspection"
             >
-              <ClipboardCheck className="w-5 h-5 mr-2" />
+              <ClipboardCheck className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Gratis Dakinspectie Aanvragen
             </Button>
-            <a 
-              href="tel:+31207123456" 
-              className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200 flex items-center justify-center space-x-2"
+            <a
+              href="tel:+31207123456"
+              className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200 flex items-center justify-center space-x-2"
               data-testid="hero-phone-cta"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
               <span>020 712 3456</span>
             </a>
           </div>

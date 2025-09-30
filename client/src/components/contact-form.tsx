@@ -211,7 +211,7 @@ export default function ContactForm() {
 
             <Button
               type="submit"
-              className="w-full orange-gradient text-white py-6 text-lg font-semibold hover:opacity-90 transition-opacity duration-200"
+              className="w-full copper-gradient text-white py-6 text-lg font-semibold hover:opacity-90 transition-opacity duration-200"
               disabled={contactMutation.isPending}
               data-testid="contact-form-submit"
             >

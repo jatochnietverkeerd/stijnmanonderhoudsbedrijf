@@ -23,9 +23,10 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-cream/30 via-white to-copper/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
+          <p className="text-copper font-semibold uppercase tracking-wide text-sm mb-4">REVIEWS</p>
           <h2 className="text-3xl lg:text-5xl font-bold text-primary mb-6">
             Wat Onze <span className="text-copper">Klanten</span> Zeggen
           </h2>
@@ -33,46 +34,51 @@ export default function Testimonials() {
             Lees waarom onze klanten Onderhoudsbedrijf Stijnman aanbevelen voor hun dakwerkzaamheden.
           </p>
         </div>
-        
+
         {/* Google Reviews Summary */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-4 bg-card border border-border rounded-xl px-8 py-6">
-            <div className="flex items-center space-x-1 text-orange text-2xl">
+          <div className="inline-flex items-center space-x-6 bg-white border-2 border-copper/20 rounded-xl px-8 py-6 shadow-lg">
+            <div className="flex items-center space-x-1 text-2xl">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-current" />
+                <Star key={i} className="w-7 h-7 fill-copper text-copper" />
               ))}
             </div>
-            <div className="text-left">
-              <div className="text-2xl font-bold text-primary">4.9/5</div>
-              <div className="text-sm text-muted-foreground">Gebaseerd op 47 Google Reviews</div>
+            <div className="text-left border-l-2 border-copper/20 pl-6">
+              <div className="text-3xl font-bold text-primary">4.9<span className="text-xl text-muted-foreground">/5</span></div>
+              <div className="text-sm text-muted-foreground font-medium">Gebaseerd op 47 Google Reviews</div>
             </div>
           </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <div 
+            <div
               key={testimonial.id}
-              className="bg-card rounded-xl p-8 border border-border hover-lift"
+              className="bg-white rounded-xl p-8 border-2 border-border hover:border-copper/30 hover-lift shadow-sm hover:shadow-lg transition-all duration-300"
               data-testid={`testimonial-${testimonial.id}`}
             >
-              <div className="flex items-center space-x-1 text-orange mb-4">
+              <div className="flex items-center space-x-1 mb-5">
                 {[...Array(parseInt(testimonial.rating))].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-current" />
+                  <Star key={i} className="w-5 h-5 fill-copper text-copper" />
                 ))}
               </div>
-              <p className="text-muted-foreground mb-6 italic">
+              <p className="text-foreground mb-6 text-base leading-relaxed">
                 "{testimonial.content}"
               </p>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-copper/10 rounded-full flex items-center justify-center">
-                  <span className="text-copper font-semibold">
+              <div className="flex items-center space-x-4 pt-4 border-t border-border/50">
+                <div className="w-14 h-14 copper-gradient rounded-full flex items-center justify-center shadow-md">
+                  <span className="text-white font-bold text-lg">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <div className="font-semibold text-primary">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.location}</div>
+                  <div className="font-bold text-primary">{testimonial.name}</div>
+                  <div className="text-sm text-muted-foreground flex items-center space-x-1">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    <span>{testimonial.location}</span>
+                  </div>
                 </div>
               </div>
             </div>

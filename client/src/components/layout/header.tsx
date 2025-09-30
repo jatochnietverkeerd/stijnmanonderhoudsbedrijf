@@ -55,7 +55,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <a
               href="tel:+31207123456"
-              className="hidden sm:flex items-center space-x-2 orange-gradient text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-200"
+              className="hidden sm:flex items-center space-x-2 copper-gradient text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-200"
               data-testid="header-phone-link"
             >
               <Phone className="w-4 h-4" />
@@ -95,7 +95,7 @@ export default function Header() {
                   <div className="pt-4 border-t border-border">
                     <a
                       href="tel:+31207123456"
-                      className="flex items-center space-x-3 orange-gradient text-white px-6 py-3 rounded-lg"
+                      className="flex items-center space-x-3 copper-gradient text-white px-6 py-3 rounded-lg"
                       data-testid="mobile-phone-link"
                     >
                       <Phone className="w-5 h-5" />

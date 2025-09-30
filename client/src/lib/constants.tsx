@@ -127,6 +127,10 @@ export const FAQS = [
     answer: "EPDM is een synthetisch rubber dat flexibeler en duurzamer is dan traditioneel bitumen. Het heeft een langere levensduur (25-40 jaar vs 15-25 jaar) en betere weersbestendigheid. Bitumen is kosteneffectiever voor kortere termijn oplossingen. Wij adviseren op basis van uw specifieke situatie."
   },
   {
+    question: "Wat zijn de gemiddelde kosten voor een nieuw dak?",
+    answer: "De kosten variëren sterk afhankelijk van grootte, materiaal en complexiteit. Een standaard EPDM plat dak kost €80-120 per m², dakpannen €100-150 per m², en premium metaalwerk (zink/koper) €150-250 per m². Tijdens de gratis inspectie krijgt u een transparante offerte op maat."
+  },
+  {
     question: "Bieden jullie financieringsmogelijkheden?",
     answer: "Ja, wij werken samen met verschillende financieringspartners voor grote renovatieprojecten. Ook accepteren wij betaling in termijnen voor projecten boven €10.000. Bespreek de mogelijkheden tijdens uw gratis inspectie."
   },
@@ -135,8 +139,44 @@ export const FAQS = [
     answer: "Onze 15-jaar garantie is mogelijk door onze kwaliteitsgerichte aanpak: uitsluitend premium materialen, ervaren vakmensen en zorgvuldige voorbereiding. Wij staan zo zeker van ons werk dat wij de langste garantie in de regio durven aan te bieden."
   },
   {
+    question: "Hoe vaak moet ik mijn dak laten inspecteren?",
+    answer: "Wij adviseren een professionele inspectie elke 3-5 jaar, of direct na extreme weersomstandigheden. Regelmatige controle voorkomt kleine problemen die kunnen uitgroeien tot dure reparaties. Onze eerste inspectie is altijd gratis."
+  },
+  {
+    question: "Werken jullie ook bij slecht weer?",
+    answer: "Voor veiligheid en kwaliteit werken wij niet bij regen, harde wind of vrieskou. Wel kunnen wij voorbereidend werk binnen uitvoeren. Bij weersvertraging communiceren wij direct en plannen we de werkzaamheden opnieuw zonder extra kosten."
+  },
+  {
+    question: "Hoe zit het met vergunningen?",
+    answer: "Voor de meeste dakwerkzaamheden in Haarlem en Amsterdam is een omgevingsvergunning vereist. Wij verzorgen de volledige aanvraag voor u, inclusief tekeningen en communicatie met de gemeente. Dit is inbegrepen in onze offerte."
+  },
+  {
+    question: "Wat maakt zink en koper dakbedekking duurzaam?",
+    answer: "Zink en koper zijn natuurlijke materialen met levensduren van 50-100 jaar. Ze zijn 100% recyclebaar, vereisen minimaal onderhoud, en ontwikkelen een beschermende patina-laag. De hogere initiële investering verdient zich terug door extreme duurzaamheid."
+  },
+  {
     question: "Kunnen jullie ook zonnepanelen installeren?",
     answer: "Wij specialiseren ons volledig op dakwerk en installeren geen zonnepanelen. Wel kunnen wij uw dak voorbereiden voor zonnepanelen en zorgen voor de juiste onderconstructie. Voor de panelen zelf verwijzen wij u graag door naar onze betrouwbare partners."
+  },
+  {
+    question: "Welke garantie krijg ik op reparaties?",
+    answer: "Reparaties hebben standaard 5 jaar garantie op vakmanschap en materialen. Voor complete dakvernieuwing geldt onze 15-jaar garantie. Alle garanties zijn schriftelijk en blijven geldig bij verkoop van uw woning."
+  },
+  {
+    question: "Hoe bereid ik mijn huis voor op dakwerkzaamheden?",
+    answer: "Wij adviseren om breekbare items van zolder te verwijderen en voertuigen uit de werkzone te plaatsen. Ons team zorgt voor bescherming van uw tuin en oprit, en wij ruimen dagelijks op. U ontvangt een gedetailleerde checklist voor aanvang."
+  },
+  {
+    question: "Werken jullie ook aan monumentale panden?",
+    answer: "Ja, wij hebben ruime ervaring met monumentale panden in historische centra van Haarlem en Amsterdam. Onze vakmensen beheersen traditionele technieken zoals loodslaan en zijn bekend met monumentenzorg-eisen en procedures."
+  },
+  {
+    question: "Bieden jullie een spoeddienst voor lekkages?",
+    answer: "Ja, voor acute lekkages hebben wij een 24/7 spoeddienst. Wij komen binnen 4 uur voor noodreparaties om verdere schade te voorkomen. Bel direct 020 712 3456 voor spoedgevallen. Let op: spoedtarief geldt buiten kantooruren."
+  },
+  {
+    question: "Wat is het verschil tussen herstel en vervanging?",
+    answer: "Bij herstel repareren wij specifieke schade (bijvoorbeeld losse pannen of kleine lekkages). Vervanging is nodig bij grootschalige schade, einde levensduur of isolatie-eisen. Tijdens de inspectie adviseren wij de meest kosteneffectieve oplossing."
   }
 ];
 

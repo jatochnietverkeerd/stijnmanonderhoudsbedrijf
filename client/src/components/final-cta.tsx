@@ -33,9 +33,9 @@ export default function FinalCTA() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-            <Button 
+            <Button
               onClick={handleRequestInspection}
-              className="w-full sm:w-auto orange-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity duration-200 h-auto"
+              className="w-full sm:w-auto copper-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity duration-200 h-auto"
               data-testid="final-cta-inspection"
             >
               <CalendarCheck className="w-5 h-5 mr-2" />

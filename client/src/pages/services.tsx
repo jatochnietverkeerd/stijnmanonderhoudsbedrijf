@@ -79,7 +79,7 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link href="/contact">
-              <span className="orange-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity duration-200 cursor-pointer flex items-center space-x-2">
+              <span className="copper-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity duration-200 cursor-pointer flex items-center space-x-2">
                 <span>Gratis Adviesgesprek</span>
                 <ArrowRight className="w-5 h-5" />
               </span>

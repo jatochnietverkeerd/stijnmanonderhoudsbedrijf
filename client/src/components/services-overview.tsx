@@ -19,27 +19,31 @@ export default function ServicesOverview() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service, index) => (
-            <div 
-              key={service.id}
-              className="hover-lift bg-card rounded-xl overflow-hidden border border-border group"
-              data-testid={`service-card-${service.id}`}
-            >
-              <img 
-                src={service.image}
-                alt={`${service.title} service`}
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" 
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
-                <p className="text-muted-foreground mb-4">{service.description}</p>
-                <Link href={`/diensten/${service.id}`}>
-                  <span className="text-copper font-semibold hover:text-primary transition-colors duration-200 flex items-center space-x-2 cursor-pointer">
+            <Link key={service.id} href={`/diensten/${service.id}`}>
+              <div
+                className="hover-lift bg-card rounded-xl overflow-hidden border border-border group cursor-pointer h-full"
+                data-testid={`service-card-${service.id}`}
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={`${service.title} service`}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 right-4 bg-copper text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Meer info →
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-copper transition-colors duration-200">{service.title}</h3>
+                  <p className="text-muted-foreground mb-4">{service.description}</p>
+                  <span className="text-copper font-semibold group-hover:text-primary transition-colors duration-200 flex items-center space-x-2">
                     <span>Meer informatie</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                   </span>
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         

@@ -68,7 +68,7 @@ export default function ServiceDetail() {
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Button 
                   onClick={handleRequestQuote}
-                  className="orange-gradient text-white px-8 py-3 hover:opacity-90 transition-opacity duration-200"
+                  className="copper-gradient text-white px-8 py-3 hover:opacity-90 transition-opacity duration-200"
                   data-testid="service-request-quote"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -163,7 +163,7 @@ export default function ServiceDetail() {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Button 
               onClick={handleRequestQuote}
-              className="orange-gradient text-white px-8 py-4 text-lg font-semibold hover:opacity-90 transition-opacity duration-200 h-auto"
+              className="copper-gradient text-white px-8 py-4 text-lg font-semibold hover:opacity-90 transition-opacity duration-200 h-auto"
               data-testid="service-detail-cta"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
